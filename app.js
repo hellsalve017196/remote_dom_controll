@@ -19,7 +19,8 @@ app.get('/web',function(request,response) {
 // creating server with express and socket
 
 var server = require('http').createServer(app);
-var io = require('socket.io').listen(server);
+var socketIO = require('socket.io');
+var io = socketIO(server);
 
 // creating server with express and socket
 
